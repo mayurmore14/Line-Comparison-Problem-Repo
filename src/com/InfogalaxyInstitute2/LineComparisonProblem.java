@@ -4,11 +4,16 @@ import java.util.Scanner;
 
 public class LineComparisonProblem {
 
-    public static void equals(double lengthofline1, double lengthofline2) {
+    //UC-3-Comparison of Two Lines
+    public static void compareTo(double lengthofline1, double lengthofline2) {
         if (lengthofline1 == lengthofline2) {
             System.out.println("Both Lines are Same. ");
         } else {
-            System.out.println("Lines are Not Same. ");
+            if(lengthofline1 > lengthofline2) {
+                System.out.println("1st Line is Greater. ");
+            } else {
+                System.out.println("2nd Line is Greater. ");
+            }
         }
     }
 
@@ -48,7 +53,7 @@ public class LineComparisonProblem {
         double lengthofline2 = Math.sqrt(Math.pow((a2 - a1) , 2) + Math.pow((b2 - b1) , 2));
         System.out.println("Length of Second Line is = " +lengthofline2);
 
-        equals(lengthofline1,lengthofline2);
-    }
+        compareTo(lengthofline1,lengthofline2);
+  }
 
 }
